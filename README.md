@@ -2,9 +2,11 @@
 LAF를 위한 다운로드 관리 프로그램
 
 설명
-1. "C:\Users\사용자명\AppData\Roaming\gallery-dl" 에 "config.json" 복사
+1. 파이썬, gallery-dl 설치 필요
 
-2. json 세팅 (hvst_setting.json)
+2. "C:\Users\사용자명\AppData\Roaming\gallery-dl" 에 "config.json" 복사
+
+3. json 세팅 (hvst_setting.json)
     - config_default : ??? 부분들 수정하여 로그인 정보 등록
     - save_path : 다운로드 위치
     - comb_path : 폴더합본 생성 위치
@@ -32,12 +34,10 @@ console버전 사용하면 로그콘솔창 나옴. 기본 버전도 log에서 �
 
 
 
-
+스파게티 코딩입니다. 잘 사용해주십시오
 
 커뮤니티
-
-https://discord.gg/PW37BpRR6w
-
-https://gall.dcinside.com/mini/board/lists?id=furrylost2022
+- https://discord.gg/PW37BpRR6w
+- https://gall.dcinside.com/mini/board/lists?id=furrylost2022
 
 
