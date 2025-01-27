@@ -22,8 +22,14 @@ log_level을 DEBUG 사용시 기록이 많고 CRITICAL 로 갈수록 적음.
 
 현재 지원 사이트 : 'twitter', 'pixiv', 'tumblr', 'deviantart', 'bluesky', 'baraag.net', 'instagram', 'naver', 'naverwebtoon', 'e621'
 
+console버전 사용하면 로그콘솔창 나옴. 기본 버전도 log에서 동일하게 확인가능
+
+
 
 웹사이트 다운로드에 https://github.com/mikf/gallery-dl 를 사용함. 
+
+
+
 
 
 
