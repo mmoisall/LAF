@@ -52,3 +52,29 @@ console버전 사용하면 로그콘솔창 나옴. 기본 버전도 log에서 �
 - https://gall.dcinside.com/mini/board/lists?id=furrylost2022
 
 
+
+---
+
+## 구형 HVST 이관 도구 (`hvst_import/`)
+
+이 저장소에는 구형 HVST의 `hvst.db` 를 새 [LAFhvst](https://github.com/mmoisall/LAFhvst)의
+`lafhvst.db` 로 이관하는 도구가 포함되어 있습니다. 자격증명(cookies/토큰/비밀번호)은 기본 제외되고,
+중복 항목은 건너뜁니다.
+
+- 폴더: [`hvst_import/`](hvst_import/) — CLI + 로컬 웹 UI
+- 자세한 사용법: [hvst_import/README.md](hvst_import/README.md)
+
+```bash
+pip install -r hvst_import/requirements.txt
+
+# 미리보기
+python import_hvst.py --lafhvst "C:\path\to\LAFhvst" --db "C:\path\to\hvst.db" --dry-run
+
+# 실제 이관
+python import_hvst.py --lafhvst "C:\path\to\LAFhvst" --db "C:\path\to\hvst.db" --apply
+```
+
+> 이관 도구는 LAFhvst 소스(`core`)를 재사용합니다. `--lafhvst` 옵션 또는 `LAFHVST_HOME`
+> 환경변수로 LAFhvst 경로를 지정하거나, 두 폴더를 형제로 두면 자동 탐지됩니다.
+
+
