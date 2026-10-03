@@ -62,6 +62,8 @@ console버전 사용하면 로그콘솔창 나옴. 기본 버전도 log에서 �
 중복 항목은 건너뜁니다.
 
 - 폴더: [`hvst_import/`](hvst_import/) — CLI + 로컬 웹 UI
+- **포터블 EXE 다운로드**: [Releases](https://github.com/mmoisall/LAF/releases/tag/hvst-import-v0.1.0) 의 `hvst_import.exe`
+  (exe 옆에 구형 폴더와 현재 LAFhvst 폴더를 나란히 두고 실행)
 - 자세한 사용법: [hvst_import/README.md](hvst_import/README.md)
 
 ```bash
