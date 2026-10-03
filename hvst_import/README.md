@@ -7,6 +7,36 @@
 - 자격증명(cookies/refresh-token/api-key/password 등)은 **기본 제외**됩니다.
 - 폐기 필드(`loc_alt`/`loc_cmb`/`cyc_min`/`cyc_max`/`ignore_level` 등)는 이관하지 않습니다.
 
+## 포터블 EXE (권장)
+
+`hvst_import.exe` 하나와 두 폴더를 같은 위치에 나란히 두면 자동으로 찾습니다.
+
+```
+아무 폴더/
+  hvst_import.exe
+  구형/        # 구형 HVST 폴더 (hvst.db 또는 data/hvst.db 포함)
+  현재/        # 현재 LAFhvst 폴더 (lafhvst.db 포함)
+```
+
+- exe 를 실행하면 창이 뜨고, 구형 DB·설정 경로가 자동으로 채워집니다.
+- 탐지 규칙: 구형 = `hvst.db`/`data/hvst.db` 가 있는 폴더, 현재 = `lafhvst.db` 가 있는 폴더.
+- 우선순위: `--lafhvst`/`--db`/`--settings` 인자 > `LAFHVST_HOME`/`HVST_DB`/`HVST_SETTINGS` 환경변수 > 자동탐지.
+- core(LAFhvst models/database/site_url)는 **현재 폴더의 `core/`(소스)를 우선** 사용하고,
+  없으면 exe 에 동봉된 core 로 동작합니다. 어느 쪽이든 대상 DB 는 현재 폴더의 `lafhvst.db`.
+- 헤드리스 서버: `hvst_import.exe --serve` (http://127.0.0.1:17374)
+- CLI: `hvst_import.exe --cli --apply` (창 없는 실행이라 결과를 보려면 `--cli --json > out.json` 처럼 리다이렉션)
+- 실행 중 오류가 나면 exe 옆 `hvst_import_error.log` 에 트레이스백이 남습니다.
+
+### 빌드
+
+```powershell
+# LAF 저장소 루트에서 (LAFhvst 소스가 형제 폴더 ..\LAFhvst 라고 가정)
+.\build_import.ps1
+# LAFhvst 경로를 직접 지정
+.\build_import.ps1 -Lafhvst "C:\path\to\LAFhvst"
+# 산출물: dist\hvst_import.exe
+```
+
 ## LAFhvst core 재사용
 
 이 도구는 LAFhvst의 `core`(models/database/site_url)를 그대로 재사용합니다. 즉 **LAFhvst 소스가

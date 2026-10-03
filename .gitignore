@@ -9,6 +9,10 @@ venv/
 *.db-shm
 *.db-wal
 
+# Build artifacts (PyInstaller)
+build/
+dist/
+
 # OS / editor
 .DS_Store
 Thumbs.db
